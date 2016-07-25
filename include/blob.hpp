@@ -4,7 +4,7 @@
 #include <algorithm>
 #include <string>
 #include <vector>
-#include <boost/shared_ptr.hpp>
+
 #include "common.hpp"
 #include "caffe.pb.h"
 #include "syncedmem.hpp"
@@ -198,7 +198,7 @@ class Blob {
 
   void fromProto(const Dtype *srcData);
 
-  inline const boost::shared_ptr<SyncedMemory>& data() const {
+  inline const std::shared_ptr<SyncedMemory>& data() const {
     CHECK(data_);
     return data_;
   }
@@ -224,8 +224,8 @@ class Blob {
   void ShareData(const Blob& other);
 
  protected:
-  boost::shared_ptr<SyncedMemory> data_;
-  boost::shared_ptr<SyncedMemory> shape_data_;
+  std::shared_ptr<SyncedMemory> data_;
+  std::shared_ptr<SyncedMemory> shape_data_;
   vector<int> shape_;
   int count_;//shape_[0]*shape_[1]*shape_[2]*shape_[3]
   int capacity_;//capacity_ 和count_最终是保持一致大小的，reshape之前capacity_要先初始化

@@ -1,8 +1,8 @@
 #include <algorithm>
 
-#include "../include/common.hpp"
-#include "../include/im2col.hpp"
-#include "../include/logging.hpp"
+#include "common.hpp"
+#include "im2col.hpp"
+#include "logging.h"
 
 namespace caffe {
 

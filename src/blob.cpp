@@ -5,7 +5,7 @@
 #include "common.hpp"
 #include "syncedmem.hpp"
 #include "math_functions.hpp"
-#include "logging.hpp"
+#include "logging.h"
 
 namespace caffe {
 

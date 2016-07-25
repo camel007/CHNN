@@ -1,6 +1,6 @@
 #ifndef CAFFE_LAYER_H_
 #define CAFFE_LAYER_H_
-#include <boost/shared_ptr.hpp>
+
 #include <algorithm>
 #include <string>
 #include <vector>
@@ -111,7 +111,7 @@ class Layer {
   /**
    * @brief Returns the vector of learnable parameter blobs.
    */
-  std::vector<boost::shared_ptr<Blob<Dtype> > >& blobs() {
+  std::vector<std::shared_ptr<Blob<Dtype> > >& blobs() {
     return blobs_;
   }
 
@@ -125,7 +125,7 @@ class Layer {
   LayerParameter layer_param_;
 
   /** The vector that stores the learnable parameters as a set of blobs. */
-  std::vector<boost::shared_ptr<Blob<Dtype> > > blobs_;
+  std::vector<std::shared_ptr<Blob<Dtype> > > blobs_;
 
   /** @brief Using the CPU device, compute the layer output. */
   virtual void Forward_cpu(const vector<Blob<Dtype>*>& bottom,

@@ -1,7 +1,7 @@
 #include <vector>
 
-#include "../include/dropout_layer.hpp"
-#include "../include/math_functions.hpp"
+#include "dropout_layer.hpp"
+#include "math_functions.hpp"
 
 namespace caffe {
 

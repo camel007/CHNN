@@ -1,5 +1,4 @@
-#ifndef CAFFE_PB_H_
-#define CAFFE_PB_H_
+#pragma once
 #include <iostream>
 #include <vector>
 #include "math_functions.hpp"
@@ -120,10 +119,10 @@ namespace caffe{
 			return shapes_[idx];
 		}
 
-        std::vector<std::vector<int> > shapes_;
+		std::vector<std::vector<int>> shapes_;
 		int size;//可学习的参数个数;eg, convolution层的weight算一个，bias算一个
 		
-        std::vector<std::vector<float> > weightAndBias;
+		std::vector<std::vector<float>> weightAndBias;
 
 		InputParameter input_param;
 		ConvolutionParameter convParam;
@@ -132,4 +131,3 @@ namespace caffe{
 		SoftmaxParameter softParam;
 	};
 }
-#endif

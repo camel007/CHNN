@@ -17,11 +17,9 @@ void InnerProductLayer<Dtype>::LayerSetUp(const vector<Blob<Dtype>*>& bottom,
   // and axis == 1, N inner products with dimension CHW are performed.
   K_ = bottom[0]->count(axis);
   // Check if we need to set up the weights
-  /*
   if (this->blobs_.size() > 0) {
 	  std::cout << "Skipping parameter initialization";
   }
-  */
   transpose_ = false;
 }
 

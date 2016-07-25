@@ -2,10 +2,9 @@
 #define CAFFE_UTIL_MATH_FUNCTIONS_H_
 
 #include <stdint.h>
-#include <cstring>
 #include <cmath>  // for std::fabs and std::signbit
 
-#include "logging.hpp"
+#include "logging.h"
 
 #include "common.hpp"
 #include "device_alternate.hpp"

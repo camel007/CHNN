@@ -3,19 +3,19 @@
 #define getpid() _getpid()
 #endif
 
-#include <boost/shared_ptr.hpp>
+
 #include <cmath>
 #include <cstdio>
 #include <ctime>
 
 #include "common.hpp"
-#include "logging.hpp"
+#include "logging.h"
 #include <memory>
 
 namespace caffe {
 
 // Make sure each thread can have different values.
-static boost::shared_ptr<Caffe> thread_instance_;
+static std::shared_ptr<Caffe> thread_instance_;
 
 Caffe& Caffe::Get() {
   if (!thread_instance_.get()) {
